@@ -36,6 +36,12 @@ describe('FSM', () => {
         it('throws an exception if config isn\'t passed', () => {
             expect(() => new FSM()).to.throw(Error);
         });
+
+        it('do well', () => {
+            const st = new FSM(config);
+            
+            expect(st.state).to.equal('normal'); 
+        })
     });
 
     describe('#getState', () => {
